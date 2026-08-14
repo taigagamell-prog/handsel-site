@@ -1,0 +1,272 @@
+/* Handsel design system
+   Ink-led. Green is reserved exclusively for the "sealed" / verified state.
+   Never use --sealed for decoration, links, buttons or headings. */
+
+:root {
+  --ink:        #10151a;
+  --ink-2:      #37424d;
+  --ink-muted:  #5d6771;
+  --paper:      #fcfcfa;
+  --surface:    #f4f4f0;
+  --rule:       #e3e3dd;
+  --sealed:     #1b6b47;
+  --sealed-bg:  #eef4f0;
+
+  --measure: 34rem;
+  --wide: 62rem;
+
+  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.6;
+  font-feature-settings: "cv05" 1, "ss01" 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  width: 100%;
+  max-width: var(--wide);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.measure { max-width: var(--measure); }
+.wrap > .measure { margin-left: 0; }
+
+/* ---------- Masthead ---------- */
+
+.masthead {
+  border-bottom: 1px solid var(--rule);
+  padding: 1.25rem 0;
+}
+
+.masthead .wrap {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.wordmark {
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.masthead nav {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.masthead nav a { color: var(--ink-muted); text-decoration: none; }
+.masthead nav a:hover { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+
+/* ---------- Type ---------- */
+
+h1 {
+  font-size: clamp(2rem, 5vw, 2.9rem);
+  line-height: 1.12;
+  letter-spacing: -0.033em;
+  font-weight: 600;
+  margin: 0 0 1.25rem;
+  max-width: 20ch;
+}
+
+h2 {
+  font-size: 1.35rem;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+  margin: 0 0 0.85rem;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.4rem;
+}
+
+p { margin: 0 0 1.1rem; }
+
+.lede {
+  font-size: 1.18rem;
+  line-height: 1.5;
+  color: var(--ink-2);
+  max-width: 46ch;
+}
+
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin: 0 0 1.1rem;
+}
+
+.small { font-size: 0.9rem; color: var(--ink-muted); }
+
+a { color: var(--ink); text-underline-offset: 3px; }
+
+/* ---------- Sections ---------- */
+
+section { padding: 4rem 0; border-bottom: 1px solid var(--rule); }
+section.hero { padding: 5rem 0 4.5rem; }
+section:last-of-type { border-bottom: 0; }
+
+.grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  margin-top: 2rem;
+}
+
+.steps { counter-reset: step; margin-top: 2rem; }
+
+.step {
+  counter-increment: step;
+  border-top: 1px solid var(--rule);
+  padding: 1.4rem 0;
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  gap: 1rem;
+}
+
+.step::before {
+  content: counter(step, decimal-leading-zero);
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  padding-top: 0.28rem;
+}
+
+.step p { margin: 0; color: var(--ink-2); }
+
+/* ---------- Sealed state (the ONLY green) ---------- */
+
+.sealed {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--sealed);
+  background: var(--sealed-bg);
+  border: 1px solid rgba(27, 107, 71, 0.22);
+  border-radius: 2px;
+  padding: 0.3rem 0.6rem;
+}
+
+.sealed::before {
+  content: "";
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--sealed);
+}
+
+/* ---------- Callout ---------- */
+
+.callout {
+  background: var(--surface);
+  border-left: 2px solid var(--ink);
+  padding: 1.4rem 1.5rem;
+  margin: 2rem 0 0;
+}
+
+.callout p:last-child { margin-bottom: 0; }
+
+/* ---------- Form ---------- */
+
+.form { margin-top: 2rem; max-width: 30rem; }
+
+.field { margin-bottom: 1rem; }
+
+label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 0.35rem;
+}
+
+input, textarea {
+  width: 100%;
+  font: inherit;
+  font-size: 1rem;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  padding: 0.65rem 0.75rem;
+}
+
+input:focus, textarea:focus {
+  outline: 2px solid var(--ink);
+  outline-offset: -1px;
+  border-color: var(--ink);
+}
+
+textarea { min-height: 6.5rem; resize: vertical; }
+
+button {
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--paper);
+  background: var(--ink);
+  border: 1px solid var(--ink);
+  border-radius: 2px;
+  padding: 0.7rem 1.4rem;
+  cursor: pointer;
+}
+
+button:hover { background: #000; }
+
+/* ---------- Prose pages ---------- */
+
+.prose { padding: 3.5rem 0 5rem; }
+.prose h2 { margin-top: 2.6rem; }
+.prose h3 { margin-top: 1.8rem; }
+.prose p, .prose li { max-width: 40rem; color: var(--ink-2); }
+.prose ul { padding-left: 1.1rem; margin: 0 0 1.1rem; }
+.prose li { margin-bottom: 0.5rem; }
+.prose table { border-collapse: collapse; width: 100%; max-width: 40rem; margin: 1.2rem 0 1.6rem; font-size: 0.93rem; }
+.prose th, .prose td { text-align: left; padding: 0.6rem 0.8rem 0.6rem 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+.prose th { font-weight: 600; color: var(--ink); }
+.prose td { color: var(--ink-2); }
+
+/* ---------- Footer ---------- */
+
+footer {
+  border-top: 1px solid var(--rule);
+  padding: 2.5rem 0 3.5rem;
+  font-size: 0.88rem;
+  color: var(--ink-muted);
+}
+
+footer .wrap { display: flex; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; }
+footer a { color: var(--ink-muted); }
+footer nav { display: flex; gap: 1.25rem; }
+
+@media (max-width: 34rem) {
+  body { font-size: 16px; }
+  section { padding: 3rem 0; }
+  section.hero { padding: 3.5rem 0 3rem; }
+}

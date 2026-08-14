@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Methodology | Handsel</title>
+<meta name="description" content="How Handsel calculates Scope 3 Category 7 employee commuting emissions: standard basis, survey design, extrapolation, emission factors, uncertainty and privacy floor.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="wordmark" href="/">Handsel</a>
+    <nav>
+      <a href="/methodology.html">Methodology</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="prose">
+  <div class="wrap">
+    <p class="eyebrow">Methodology · v1.0 · August 2026</p>
+    <h1 style="max-width:24ch">How we calculate Category 7.</h1>
+    <p class="lede">Written to be handed to an assurance provider without editing. If something here is unclear or you disagree with a choice we have made, that is a conversation worth having before an engagement rather than during one.</p>
+
+    <h2>1. Standard basis</h2>
+    <p>Calculations follow the GHG Protocol Corporate Value Chain (Scope 3) Accounting and Reporting Standard, Category 7: Employee commuting. Category 7 covers transportation of employees between their homes and their worksites, in vehicles not owned or operated by the reporting company.</p>
+    <p>Emissions from teleworking are treated as an optional inclusion under the standard. We calculate and report them as a separate line so that they can be included or excluded without recalculating the base figure, depending on what your reporting regime ultimately requires.</p>
+
+    <h2>2. Boundary</h2>
+    <p>The reporting boundary is agreed in writing before fielding and stated on the face of the report. It records:</p>
+    <ul>
+      <li>The legal entity or entities in scope, and their relationship to the consolidated reporting entity.</li>
+      <li>Every worksite in scope, with headcount as at the boundary date.</li>
+      <li>The employment categories included, for example full time, part time, fixed term, and whether contractors and agency staff are in or out.</li>
+      <li>The reporting period, aligned to your fiscal year rather than the calendar year unless you instruct otherwise.</li>
+      <li>Anything excluded, with the reason and an estimate of its likely materiality.</li>
+    </ul>
+
+    <h2>3. Calculation method</h2>
+    <p>The GHG Protocol permits three approaches for Category 7. We use the distance-based method as the primary approach, because it is the one that can be evidenced from a survey and reproduced by a third party.</p>
+    <table>
+      <tr><th>Method</th><th>Use</th></tr>
+      <tr><td>Distance-based</td><td>Primary. Surveyed commuting distance and mode, multiplied by mode-specific emission factors.</td></tr>
+      <tr><td>Fuel-based</td><td>Applied only where an employer reimburses mileage or fuel and holds reliable records for that population.</td></tr>
+      <tr><td>Average-data</td><td>Used only to fill a defined gap, for example a site with a response rate too low to model, and always disclosed as such.</td></tr>
+    </table>
+    <p>Where more than one method is used, the report states which population each covers and the two are never blended silently.</p>
+
+    <h2>4. Survey instrument</h2>
+    <p>The instrument is short by design. Response rate is the single largest driver of uncertainty in Category 7, and a longer survey buys detail at the cost of the thing that matters most.</p>
+    <p>It asks, for a typical working week in the reporting period: primary commuting mode, one-way distance, days commuted per week, any secondary mode, and days worked from home. Vehicle type is asked where the primary mode is a private car, since fuel type materially changes the factor.</p>
+    <p>The instrument as fielded is reproduced in full in the evidence file, including the exact wording, the order of questions and any routing logic.</p>
+
+    <h2>5. Sampling, response and extrapolation</h2>
+    <p>We field to the full in-scope population rather than to a sample, and then treat the achieved responses as a sample of that population.</p>
+    <p>Responses are grossed up to the full population by worksite, and within worksite by employment category where numbers permit. Where a stratum is too small to model on its own it is merged upward into the next level and that merge is recorded.</p>
+    <p>Non-response is treated explicitly. We do not assume that non-respondents commute like respondents without testing it. Where the achieved response rate falls below the threshold agreed at scoping, the report says so on its face rather than in an appendix, and the affected population is handled with the average-data method and flagged.</p>
+
+    <h2>6. Emission factors</h2>
+    <p>US calculations use the EPA Emission Factors for Greenhouse Gas Inventories. Every factor carries its source, its publication version and the date it was applied. Factors are not updated mid-engagement. If a factor set is revised after delivery, we say so and reissue on request rather than silently restating.</p>
+    <p>Emissions are reported in tonnes of CO2 equivalent, with the global warming potential set stated.</p>
+
+    <h2>7. Uncertainty</h2>
+    <p>The report states a quantified uncertainty range rather than a single unqualified number. The principal drivers are response rate, the accuracy of self-reported distance, and the representativeness of respondents against the population. Each is reported separately so that a reviewer can see which one is doing the work.</p>
+
+    <h2>8. Privacy floor</h2>
+    <p class="sealed">Aggregates of ten or more</p>
+    <p style="margin-top:1rem">Individual responses are never disclosed to the employer. No figure is reported at a grain finer than a group of ten or more responses. Where a worksite, team or category falls below that floor, it is merged into a larger grouping or suppressed, and the suppression is disclosed so that a reader can see a number is missing rather than assuming it is zero.</p>
+    <p>Survey responses are collected under a privacy notice given to every respondent before they answer. Home addresses are not collected. Distance is self-reported by the respondent, not derived from an address.</p>
+
+    <h2>9. Reproducibility</h2>
+    <p>You receive the calculation workbook, not a locked output. A competent third party holding the workbook and the evidence file should be able to reproduce every figure in the report without contacting us. If they cannot, that is a defect and we will fix it.</p>
+
+    <h2>10. Regulatory position</h2>
+    <p>This methodology is written against the GHG Protocol, which is the standard California SB 253 references. As of August 2026, CARB has adopted initial regulations for Scope 1 and 2 reporting and remains in pre-rulemaking on Scope 3, with more than one phase-in option still live. We do not represent this methodology as compliant with a final Scope 3 rule that does not yet exist. We represent it as consistent with the underlying standard and structured so that it can be conformed to the rule once adopted.</p>
+
+    <h2>11. Version control</h2>
+    <p>This page is versioned. Material changes are dated and the previous version is retained and available on request, so that a report delivered under an earlier version can be read against the methodology in force at the time.</p>
+    <p class="small">Version 1.0, August 2026. Questions to <a href="mailto:hello@handseldata.com">hello@handseldata.com</a>.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>Handsel</div>
+    <nav>
+      <a href="/methodology.html">Methodology</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="mailto:hello@handseldata.com">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
