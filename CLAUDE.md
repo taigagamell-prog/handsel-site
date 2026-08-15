@@ -15,8 +15,16 @@ mid-market employers preparing for California SB 253 reporting.
 
 The offer today is a fixed-scope services engagement at $15,000 to $18,000: a
 Category 7 report, the calculation workbook that produced it, and the evidence
-file underneath. It is a services business, not a product. There is no app, no
-signup and no free tier, and the site must not imply any of those exist.
+file underneath. It is a services business, and that engagement is the only
+thing anyone can buy right now. There is no signup and no free tier, and the
+site must not imply either exists.
+
+The employee app (passive trip capture, rewards for verified low-carbon travel,
+redemption) is now shown on the landing page, but strictly as **roadmap**: what
+Handsel is building and is seeking pilot employers for. It must always be framed
+as in development and not yet live. Never imply it exists today, is buyable, or
+has users. The "In development · not live yet" badge and the "This does not
+exist yet" line are load-bearing. Do not remove them.
 
 The buyer is a sustainability lead, ESG director, controller or CFO at a US
 employer. They are buying **defensibility in front of an assurance provider**,
@@ -28,9 +36,9 @@ their auditor.
 These are real parts of the longer plan but are deliberately absent from public
 material right now. Do not reintroduce them:
 
-- The UK deposit return scheme / producer verification line. Cut.
-- The rewards marketplace, points ledger, serialised codes and redemption. Parked.
-- Any subscription pricing or platform product. Not yet real.
+- The UK deposit return scheme / producer verification line. Cut. Still out.
+- Any subscription pricing or platform product sold as available. Not yet real.
+  The app appears only as unpriced roadmap, never as something on sale.
 - Anything about funding, investors or a round. Handsel is bootstrapped and
   there is no raise.
 - Team pages, headcount, or "we" framing that implies a company larger than it
