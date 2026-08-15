@@ -18,7 +18,10 @@
 
 <header class="masthead">
   <div class="wrap">
-    <a class="wordmark" href="/">Handsel</a>
+    <a class="wordmark" href="/">
+      <svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="4" fill="#10151a"/><path d="M10 8v16M22 8v16M10 16h12" stroke="#fcfcfa" stroke-width="2.75" stroke-linecap="square" fill="none"/></svg>
+      <span>Handsel</span>
+    </a>
     <nav>
       <a href="/methodology.html">Methodology</a>
       <a href="#contact">Contact</a>
@@ -30,10 +33,27 @@
 
 <section class="hero">
   <div class="wrap">
-    <p class="eyebrow">Scope 3 · Category 7 · Employee commuting</p>
+    <p class="tagpill">Scope 3 · Category 7 · Employee commuting</p>
     <h1>Employee commuting data that survives assurance.</h1>
     <p class="lede">Handsel measures Category 7 for US employers and hands over three things: the figure, the model that produced it, and the evidence file underneath. Your assurance provider gets something to check rather than a number to accept.</p>
-    <p><a href="#contact">Ask for the sample report pack</a></p>
+    <p><a class="btn" href="#contact">Ask for the sample report pack</a></p>
+  </div>
+</section>
+
+<section class="strip">
+  <div class="wrap">
+    <div class="stat">
+      <div class="n">FY2026</div>
+      <div class="t">The commuting year your first report will likely cover. That data is being generated now and cannot be rebuilt later.</div>
+    </div>
+    <div class="stat">
+      <div class="n">10+</div>
+      <div class="t">The smallest group any employer ever sees. Below that, responses are merged or suppressed.</div>
+    </div>
+    <div class="stat">
+      <div class="n">$15k&ndash;$18k</div>
+      <div class="t">Fixed scope, agreed before the work starts. No metering, no per-seat charge, no subscription.</div>
+    </div>
   </div>
 </section>
 
@@ -52,7 +72,7 @@
 <section>
   <div class="wrap">
     <h2>What you get</h2>
-    <p class="measure">A fixed-scope engagement, delivered in weeks rather than quarters.</p>
+    <p class="measure">A fixed-scope engagement at <strong>$15,000 to $18,000</strong>, delivered in weeks rather than quarters. The price is agreed before the work starts. There is no metering, no per-seat charge and no subscription.</p>
     <div class="grid">
       <div>
         <h3>The report</h3>
@@ -67,12 +87,32 @@
         <p class="small">Sample frame, response counts, the instrument as fielded, and the extrapolation logic used to cover non-respondents. This is the part that gets examined.</p>
       </div>
     </div>
+
+    <div class="panel">
+      <div class="panel-head">
+        <div>
+          <p class="panel-cap">Coverage, stated on the face of the report</p>
+          <p class="panel-sub">Illustrative figures for a fictional employer</p>
+        </div>
+      </div>
+      <div class="bar"><i style="width:63%"></i><i style="width:37%"></i></div>
+      <div class="bar-legend">
+        <span><b>63%</b> measured from responses</span>
+        <span><b>37%</b> extrapolated and disclosed</span>
+      </div>
+      <div class="rows">
+        <div class="row"><span>Survey responses, weighted to the population</span><b>63.2%</b></div>
+        <div class="row"><span>Non-respondents, site-average extrapolation</span><b>36.8%</b></div>
+        <div class="row"><span>Groups below the reporting floor</span><b>merged or suppressed</b></div>
+      </div>
+      <p class="panel-foot">Every figure traces from a raw response to the headline number. What was estimated rather than measured is on the page, not buried in a footnote.</p>
+    </div>
   </div>
 </section>
 
 <section>
-  <div class="wrap"><div class="measure">
-    <h2>How it runs</h2>
+  <div class="wrap">
+    <div class="measure"><h2>How it runs</h2></div>
     <div class="steps">
       <div class="step"><p><strong>Scope call.</strong> We agree the reporting boundary, the sites in scope, and which of your existing HR and access data can carry part of the load.</p></div>
       <div class="step"><p><strong>Instrument and field.</strong> A short commuting survey, designed for response rate rather than completeness, fielded to your staff over roughly two weeks.</p></div>
@@ -80,6 +120,57 @@
       <div class="step"><p><strong>Deliver and defend.</strong> You get the report pack and the workbook. When your assurance provider comes back with questions, we answer them.</p></div>
     </div>
   </div>
+</section>
+
+<section class="band-dark">
+  <div class="wrap">
+    <div class="measure">
+      <p class="eyebrow">What your staff actually do</p>
+      <h2>A link in their inbox. Two minutes in a browser.</h2>
+      <p>No app to install, no login, no account. Staff get a link, answer a few questions about a typical week, and close the tab. This is the entire data collection surface, and it is the same instrument that ships in your evidence file.</p>
+    </div>
+
+    <div class="phones" aria-hidden="true">
+      <figure class="phone">
+        <div class="phone-bar"><span class="dot"></span>survey.handseldata.com</div>
+        <div class="phone-screen">
+          <p class="ps-eyebrow">Handsel commuting survey</p>
+          <p class="ps-h">About your typical week getting to work.</p>
+          <p class="ps-note">Around 2 minutes. Your individual answers are never shown to your employer.</p>
+          <span class="ps-btn">Start</span>
+        </div>
+        <figcaption>1 · The invite</figcaption>
+      </figure>
+
+      <figure class="phone">
+        <div class="phone-bar"><span class="dot"></span>survey.handseldata.com</div>
+        <div class="phone-screen">
+          <p class="ps-eyebrow">1 of 4</p>
+          <p class="ps-h">In a typical week, how do you usually get to the office?</p>
+          <div class="ps-opts">
+            <span class="ps-opt sel">Drive alone</span>
+            <span class="ps-opt">Carpool or get a ride</span>
+            <span class="ps-opt">Bus, train or subway</span>
+            <span class="ps-opt">Bike or walk</span>
+            <span class="ps-opt">I work from home</span>
+          </div>
+        </div>
+        <figcaption>2 · One question at a time</figcaption>
+      </figure>
+
+      <figure class="phone">
+        <div class="phone-bar"><span class="dot"></span>survey.handseldata.com</div>
+        <div class="phone-screen">
+          <p class="ps-eyebrow">Done</p>
+          <p class="ps-h">That's everything. Thank you.</p>
+          <p class="ps-note">Your answers are pooled with your colleagues' before anyone sees them. Nothing is reported at a grain finer than a group of ten.</p>
+          <span class="sealed">Aggregates of ten or more</span>
+        </div>
+        <figcaption>3 · Pooled before anyone sees it</figcaption>
+      </figure>
+    </div>
+
+    <p class="small measure" style="margin-top:2rem">Mock shown for illustration. The exact wording is tuned per engagement for response rate.</p>
   </div>
 </section>
 
