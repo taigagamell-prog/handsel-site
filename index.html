@@ -184,47 +184,98 @@
       <p><strong>This does not exist yet.</strong> We are building it, and it needs real employers to pilot before it works. If you want the stronger number sooner and are willing to help shape it, talk to us.</p>
     </div>
 
-    <div class="showcase" aria-hidden="true">
-      <div class="phones2">
-        <div class="appph">
-          <div class="appscreen">
-            <div class="app-h"><span>Handsel</span><span>This period</span></div>
-            <div class="bal">
-              <div class="bal-l">Points earned</div>
-              <div class="bal-v">2,450 <span>pts</span></div>
-              <div class="spark"><i style="height:35%"></i><i style="height:60%"></i><i style="height:45%"></i><i style="height:80%"></i><i style="height:55%"></i><i style="height:70%"></i><i style="height:40%"></i></div>
-            </div>
-            <p class="app-mini">Earned automatically</p>
-            <div class="earn"><div><div class="e-what">Bus to work</div><div class="e-when">Mon · 4.2 mi</div></div><b>+33</b></div>
-            <div class="earn"><div><div class="e-what">Cycled home</div><div class="e-when">Mon · 4.2 mi</div></div><b>+41</b></div>
-            <div class="earn"><div><div class="e-what">Train, both ways</div><div class="e-when">Tue · 11 mi</div></div><b>+58</b></div>
-          </div>
-        </div>
+    <div class="appwrap">
+      <div class="device" id="hsApp" role="group" aria-label="Interactive preview of the Handsel employee app">
+        <div class="device-top"></div>
+        <div class="screenport">
 
-        <div class="appph">
-          <div class="scanscreen">
-            <div class="reticle"></div>
-            <div class="scan-sheet">
-              <div class="ss-title">Refill verified</div>
-              <div class="ss-pts">+15 pts</div>
-              <div class="ss-sub">0.7 kg CO2e avoided</div>
+          <section class="scrn is-active" data-screen="home">
+            <div class="scrn-top">
+              <div><div class="hello">Alex Rivera</div><div class="sub2">Northwind Materials</div></div>
+              <div class="ava">AR</div>
+            </div>
+            <div class="ptcard">
+              <div class="ptl">Points balance</div>
+              <div class="ptv"><span data-pts>2,450</span> <small>pts</small></div>
+              <div class="spark"><i style="height:35%"></i><i style="height:60%"></i><i style="height:45%"></i><i style="height:80%"></i><i class="hi" style="height:55%"></i><i class="hi" style="height:70%"></i><i class="hi" style="height:40%"></i></div>
+              <div class="ptmeta"><b>+132 this week</b> · earned automatically</div>
+            </div>
+            <div class="sec-label">This week</div>
+            <div class="trip">
+              <span class="tico"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="12" rx="2"/><path d="M4 11h16"/><circle cx="8" cy="19" r="1.3"/><circle cx="16" cy="19" r="1.3"/></svg></span>
+              <div class="tmid"><div class="tw">Bus to work</div><div class="tsub">Mon · 4.2 mi · verified</div></div>
+              <span class="tpts">+33</span>
+            </div>
+            <div class="trip">
+              <span class="tico"><svg viewBox="0 0 24 24"><circle cx="6" cy="16" r="3.2"/><circle cx="18" cy="16" r="3.2"/><path d="M6 16l4-7h4.5M9 9h4l3 7"/></svg></span>
+              <div class="tmid"><div class="tw">Cycled home</div><div class="tsub">Mon · 4.2 mi · verified</div></div>
+              <span class="tpts">+41</span>
+            </div>
+            <div class="trip">
+              <span class="tico"><svg viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="14" rx="3"/><path d="M6 11h12M9 21l-2 2M15 21l2 2"/><circle cx="9.5" cy="14" r="1"/><circle cx="14.5" cy="14" r="1"/></svg></span>
+              <div class="tmid"><div class="tw">Train, both ways</div><div class="tsub">Tue · 11 mi · verified</div></div>
+              <span class="tpts">+58</span>
+            </div>
+          </section>
+
+          <section class="scrn" data-screen="scan">
+            <div class="sec-label">Scan a code</div>
+            <div class="scan-view"><div class="ret"></div><div class="scanline"></div></div>
+            <p class="scan-cap">Point the camera at a 2D code on a pack or receipt. Most points arrive without this.</p>
+            <button type="button" class="btn btn-block" id="scanBtn">Simulate a scan</button>
+            <div class="sealres" id="scanRes" hidden>
+              <div class="sr-t">Refill verified</div>
+              <div class="sr-p">+15 pts</div>
+              <div class="sr-s">0.7 kg CO2e avoided</div>
               <span class="sealed">Sealed · counted once</span>
             </div>
-          </div>
-        </div>
+          </section>
 
-        <div class="appph">
-          <div class="appscreen">
-            <div class="app-h"><span>Your data</span></div>
+          <section class="scrn" data-screen="rewards">
+            <div class="sec-label">Rewards</div>
+            <p class="bal-line">Balance <b><span data-pts>2,450</span> pts</b>. Redeem for real products, never cash.</p>
+            <div class="rwd">
+              <div class="rwd-mid"><div class="rwd-t">Repair credit</div><div class="rwd-c">800 pts</div></div>
+              <button type="button" class="redeem" data-cost="800">Redeem</button>
+            </div>
+            <div class="rwd">
+              <div class="rwd-mid"><div class="rwd-t">Refill starter kit</div><div class="rwd-c">1,200 pts</div></div>
+              <button type="button" class="redeem" data-cost="1200">Redeem</button>
+            </div>
+            <div class="rwd">
+              <div class="rwd-mid"><div class="rwd-t">Coffee subscription, one month</div><div class="rwd-c">2,000 pts</div></div>
+              <button type="button" class="redeem" data-cost="2000">Redeem</button>
+            </div>
+            <div class="rwd">
+              <div class="rwd-mid"><div class="rwd-t">Transit pass credit</div><div class="rwd-c">3,500 pts</div></div>
+              <button type="button" class="redeem" data-cost="3500">Redeem</button>
+            </div>
+          </section>
+
+          <section class="scrn" data-screen="you">
+            <div class="sec-label">Your impact</div>
+            <div class="impact">
+              <div class="ic"><div class="n g">312 kg</div><div class="t">CO2e avoided this year</div></div>
+              <div class="ic"><div class="n">84%</div><div class="t">of trips verified passively</div></div>
+            </div>
+            <div class="sec-label">Your data</div>
             <div class="privacy-note">Your employer sees totals for groups of ten or more. Never your trips, your purchases or your name.</div>
-            <p class="app-mini">Sources you control</p>
-            <div class="src"><span>Trips</span><span class="tog on"></span></div>
-            <div class="src"><span>Transit account</span><span class="tog on"></span></div>
-            <div class="src"><span>Card-linked receipts</span><span class="tog on"></span></div>
-            <div class="src"><span class="s-off">Rideshare</span><span class="tog"></span></div>
-          </div>
+            <div class="sec-label">Sources you control</div>
+            <div class="src"><span>Trips</span><button type="button" class="tog on" aria-pressed="true" aria-label="Trips"></button></div>
+            <div class="src"><span>Transit account</span><button type="button" class="tog on" aria-pressed="true" aria-label="Transit account"></button></div>
+            <div class="src"><span>Card-linked receipts</span><button type="button" class="tog on" aria-pressed="true" aria-label="Card-linked receipts"></button></div>
+            <div class="src off"><span>Rideshare</span><button type="button" class="tog" aria-pressed="false" aria-label="Rideshare"></button></div>
+          </section>
+
         </div>
+        <nav class="tabbar" aria-label="App preview navigation">
+          <button type="button" class="tab is-active" data-go="home" aria-selected="true"><svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7M6 10v9h12v-9"/></svg>Home</button>
+          <button type="button" class="tab" data-go="scan" aria-selected="false"><svg viewBox="0 0 24 24"><path d="M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M20 16v3a1 1 0 0 1-1 1h-3M8 20H5a1 1 0 0 1-1-1v-3M4 12h16"/></svg>Scan</button>
+          <button type="button" class="tab" data-go="rewards" aria-selected="false"><svg viewBox="0 0 24 24"><rect x="4" y="9" width="16" height="11" rx="1"/><path d="M4 13h16M12 9v11M12 9c-2.5 0-3.5-4 0-3 3.5-1 2.5 3 0 3z"/></svg>Rewards</button>
+          <button type="button" class="tab" data-go="you" aria-selected="false"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-4 3.5-6 7-6s7 2 7 6"/></svg>You</button>
+        </nav>
       </div>
+      <p class="apphint">Working preview. Switch tabs, scan a code, redeem your points.</p>
     </div>
 
     <div class="measure">
@@ -293,6 +344,75 @@
 </section>
 
 </main>
+
+<script>
+(function () {
+  var app = document.getElementById('hsApp');
+  if (!app) return;
+
+  var pts = 2450;
+  function fmt(n) { return n.toLocaleString('en-US'); }
+
+  function render() {
+    app.querySelectorAll('[data-pts]').forEach(function (el) { el.textContent = fmt(pts); });
+    app.querySelectorAll('.redeem').forEach(function (b) {
+      if (b.dataset.done) return;
+      b.disabled = pts < parseInt(b.dataset.cost, 10);
+    });
+  }
+
+  function show(screen) {
+    app.querySelectorAll('.tab').forEach(function (t) {
+      var on = t.dataset.go === screen;
+      t.classList.toggle('is-active', on);
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+    });
+    app.querySelectorAll('.scrn').forEach(function (s) {
+      s.classList.toggle('is-active', s.dataset.screen === screen);
+    });
+  }
+
+  app.querySelectorAll('.tab').forEach(function (t) {
+    t.addEventListener('click', function () { show(t.dataset.go); });
+  });
+
+  var scanBtn = document.getElementById('scanBtn');
+  var scanRes = document.getElementById('scanRes');
+  if (scanBtn) {
+    scanBtn.addEventListener('click', function () {
+      pts += 15;
+      render();
+      scanRes.hidden = false;
+      scanRes.classList.remove('pop');
+      void scanRes.offsetWidth;
+      scanRes.classList.add('pop');
+    });
+  }
+
+  app.querySelectorAll('.redeem').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var cost = parseInt(b.dataset.cost, 10);
+      if (b.dataset.done || pts < cost) return;
+      pts -= cost;
+      b.dataset.done = '1';
+      b.disabled = true;
+      b.textContent = 'Redeemed';
+      b.classList.add('is-done');
+      render();
+    });
+  });
+
+  app.querySelectorAll('.tog').forEach(function (t) {
+    t.addEventListener('click', function () {
+      var on = t.classList.toggle('on');
+      t.setAttribute('aria-pressed', on ? 'true' : 'false');
+      t.parentElement.classList.toggle('off', !on);
+    });
+  });
+
+  render();
+})();
+</script>
 
 <footer>
   <div class="wrap">

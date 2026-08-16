@@ -26,6 +26,11 @@ as in development and not yet live. Never imply it exists today, is buyable, or
 has users. The "In development · not live yet" badge and the "This does not
 exist yet" line are load-bearing. Do not remove them.
 
+The app is shown as an interactive preview: a single device with a tab bar
+(Home, Scan, Rewards, You) driven by a small inline `<script>` at the bottom of
+`index.html`. It is a labelled "Working preview", a mock, not a real client. No
+build step and no dependency: keep the JS vanilla and inline.
+
 The buyer is a sustainability lead, ESG director, controller or CFO at a US
 employer. They are buying **defensibility in front of an assurance provider**,
 not enthusiasm about climate. Write for someone who will forward the page to
